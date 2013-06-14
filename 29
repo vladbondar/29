@@ -1,0 +1,21 @@
+#include "stdafx.h"
+#include <stdio.h>
+#include <iostream>
+#include <conio.h>
+int product(int i, ...)
+{
+  int* pointer = &i;
+	int result = 1;
+	while(*pointer)
+		result *= *pointer++;
+	return result;
+}
+
+int main()
+{
+	printf("Product = %d\n", product(1, 2, 3, 4));
+	printf("Product = %d\n", product(1, 2, 3, 4, 5));
+	printf("Product = %d\n", product(1, 2, 3, 4, 4, 4, 4));
+	system("pause");
+	return 0;
+}
